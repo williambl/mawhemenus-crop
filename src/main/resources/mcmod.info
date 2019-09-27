@@ -1,0 +1,16 @@
+[
+{
+  "modid": "mawhemenuscrop",
+  "name": "Mawhemenus Crop",
+  "description": "Adds the mawhemenus crop.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Willbl3pic", "ThanasiShadoW"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
