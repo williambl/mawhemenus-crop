@@ -24,7 +24,7 @@ public class MawhemenusCrop
 
     private static Logger logger;
 
-    @GameRegistry.ObjectHolder(MODID+":mawhemenus_fruit")
+    @GameRegistry.ObjectHolder(MODID+":juicy_mawhemenus_fruit")
     public static Item FRUIT;
 
     @GameRegistry.ObjectHolder(MODID+":mawhemenus_bulb")
@@ -49,7 +49,7 @@ public class MawhemenusCrop
         @SubscribeEvent
         public static void registerItems(RegistryEvent.Register<Item> event) {
             event.getRegistry().registerAll(
-                    nameItem(new ItemFood(2, false).setCreativeTab(CreativeTabs.FOOD), "mawhemenus_fruit"),
+                    nameItem(new ItemFood(2, false).setCreativeTab(CreativeTabs.FOOD), "juicy_mawhemenus_fruit"),
                     nameItem(new ItemSeeds(CROP, Blocks.FARMLAND), "mawhemenus_bulb")
             );
         }
