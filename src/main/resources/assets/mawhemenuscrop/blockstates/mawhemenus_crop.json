@@ -1,8 +1,34 @@
 {
+    "forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:crop",
+        "textures": {
+            "crop": "mawhemenuscrop:blocks/mawhemenus_stage0"
+        }
+    },
     "variants": {
-        "age=0": { "model": "mawhemenuscrop:mawhemenus_stage0" },
-        "age=1": { "model": "mawhemenuscrop:mawhemenus_stage1" },
-        "age=2": { "model": "mawhemenuscrop:mawhemenus_stage2" },
-        "age=3": { "model": "mawhemenuscrop:mawhemenus_stage3" }
+        "normal": [{}],
+        "age": {
+            "0": {
+                "textures": {
+                    "crop": "mawhemenuscrop:blocks/mawhemenus_stage0"
+                }
+            },
+            "1": {
+                "textures": {
+                    "crop": "mawhemenuscrop:blocks/mawhemenus_stage1"
+                }
+            },
+            "2": {
+                "textures": {
+                    "crop": "mawhemenuscrop:blocks/mawhemenus_stage2"
+                }
+            },
+            "3": {
+                "textures": {
+                    "crop": "mawhemenuscrop:blocks/mawhemenus_stage3"
+                }
+            }
+        }
     }
 }

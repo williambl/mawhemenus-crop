@@ -1,11 +1,14 @@
 package com.williambl.mawhemenuscrop;
 
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemSeeds;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -61,12 +64,18 @@ public class MawhemenusCrop
             );
         }
 
+        @SubscribeEvent
+        public static void registerItemModels(ModelRegistryEvent event) {
+            ModelLoader.setCustomModelResourceLocation(BULB, 0, new ModelResourceLocation(BULB.getRegistryName(), ""));
+            ModelLoader.setCustomModelResourceLocation(FRUIT, 0, new ModelResourceLocation(FRUIT.getRegistryName(), ""));
+        }
+
         private static Item nameItem(Item itemIn, String name) {
-            return itemIn.setRegistryName(name).setUnlocalizedName(itemIn.getRegistryName().toString().replace(":", "."));
+            return itemIn.setRegistryName(name).setTranslationKey(itemIn.getRegistryName().toString().replace(":", "."));
         }
 
         private static Block nameBlock(Block blockIn, String name) {
-            return blockIn.setRegistryName(name).setUnlocalizedName(blockIn.getRegistryName().toString().replace(":", "."));
+            return blockIn.setRegistryName(name).setTranslationKey(blockIn.getRegistryName().toString().replace(":", "."));
         }
     }
 }
